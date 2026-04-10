@@ -42,8 +42,8 @@ The consequences were measurable:
 | Best performing mechanic ROI | +0.09 | +10.12 |
 | Worst performing mechanic ROI | -0.11 | -10.00 |
 
-**Infrastructure cost: £11/month for both markets combined.**  
-A single avoided bad promotion decision (typically £50K–£500K in wasted trade spend) pays for years of infrastructure.
+**Infrastructure cost: ~£50/month for both markets combined.**  
+A single avoided bad promotion decision (typically £50K–£500K in wasted trade spend) pays for years of infrastructure running costs estimated at £35–£65/month for a live two-market ML system
 
 ---
 
