@@ -49,7 +49,7 @@ A single avoided bad promotion decision (typically £50K–£500K in wasted trad
 
 ### Architecture
 
-![Promotional Analytics Architecture](architecture/promotional-analytics-architecture.svg)
+![Promotional Analytics Architecture]/promotional-analytics-architecture.svg)
 
 *End-to-end pipeline: raw sell-out data → feature engineering → XGBoost model → Vertex AI endpoint → Cloud Run → Streamlit planner interface*
 
