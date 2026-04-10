@@ -33,7 +33,7 @@ The consequences were measurable:
 
 ### Key Business Outcomes
 
-| Metric | Europe | Asia |
+| Metric | Market A | Market B |
 |--------|---------------|----------------|
 | Model accuracy (R²) | 0.81 | 0.70 |
 | Improvement over baseline | 5x | 5x |
