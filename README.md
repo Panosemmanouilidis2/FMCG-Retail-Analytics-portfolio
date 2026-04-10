@@ -9,7 +9,7 @@
 
 ### The Business Problem
 
-A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
+A global FMCG manufacturer running thousands of trade promotions annually across markets in Europe and Asia had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
 
 The consequences were measurable:
 
@@ -22,19 +22,19 @@ The consequences were measurable:
 
 ### What Was Built
 
-- **XGBoost sell-out forecasting model** — R² 0.81 (Europe), R² 0.70 (Asia). 5x improvement over linear baseline
+- **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B). 5x improvement over linear baseline
 - **Pre-execution ROI framework** — planners obtain volume forecast and ROI estimate before any promotion runs
 - **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
 - **Model explainability layer** — identifies whether a promotion is predicted to succeed or fail, and why, in plain language
-- **Data quality resolution** — cleaned and validated 640K+ promotional event records across two structurally different markets
+- **Data quality resolution** — cleaned and validated large-scale promotional event records across two structurally different markets
 
 ---
 
 ### Key Business Outcomes
 
-| Metric | Western Europe | Southeast Asia |
-|--------|---------------|----------------|
+| Metric | Market A (Europe) | Market B (Asia) |
+|--------|-------------------|-----------------|
 | Model accuracy (R²) | 0.81 | 0.70 |
 | Improvement over baseline | 5x | 5x |
 | Planning bias identified | -35% over-forecast | +103% under-forecast |
@@ -43,7 +43,7 @@ The consequences were measurable:
 | Worst performing mechanic ROI | -0.11 | -10.00 |
 
 **Infrastructure cost: ~£50/month for both markets combined.**  
-A single avoided bad promotion decision (typically £50K–£500K in wasted trade spend) pays for years of infrastructure running costs estimated at £35–£65/month for a live two-market ML system
+A single avoided bad promotion decision (typically £50K–£500K in wasted trade spend) pays for years of infrastructure running costs.
 
 ---
 
@@ -72,7 +72,7 @@ A single avoided bad promotion decision (typically £50K–£500K in wasted trad
 
 ### Data & Confidentiality Notice
 
-This project was developed against live commercial sell-out and sell-in data across two markets for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data presented in this repository is synthetically generated to preserve the statistical properties and structural characteristics of the original - planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. The methodology, deployment architecture, and business outcomes are genuine.
+This project was developed against live commercial sell-out and sell-in data across two markets for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data presented in this repository is synthetically generated to preserve the statistical properties and structural characteristics of the original — planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. The methodology, deployment architecture, and business outcomes are genuine.
 
 ---
 
