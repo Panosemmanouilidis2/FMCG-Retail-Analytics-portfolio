@@ -12,10 +12,10 @@ A global FMCG manufacturer running thousands of trade promotions annually across
 
 The consequences were measurable:
 
-- Planners in Market A (Europe) were systematically **over-forecasting promotional volumes by 35%** — leading to excess inventory and overstated trade investment cases
-- Planners in Market B (Asia) were **under-forecasting by 103%** — leaving significant demand unmet and growth opportunity unrealised
+- Planners in Market A (Europe) were systematically **over-forecasting promotional volumes by 35%** leading to excess inventory and overstated trade investment cases
+- Planners in Market B (Asia) were **under-forecasting by 103%** leaving significant demand unmet and growth opportunity unrealised
 - **Around 70% of promotions** across both markets missed their volume plan by more than 50% with no mechanism to identify this risk in advance
-- No pre-execution ROI visibility — no way to know which promotions would generate positive incremental gross profit before committing spend
+- No pre-execution ROI visibility and no way to know which promotions would generate positive incremental gross profit before committing spend
 
 ---
 
