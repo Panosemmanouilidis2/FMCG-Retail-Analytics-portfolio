@@ -2,7 +2,6 @@
 
 **Panos Emmanouilidis** · Data Scientist & Analytics Consultant  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/panosemmanouilidis)
-
 ---
 
 ## Featured Project: Promotional Analytics — Sell-Out Forecasting & Trade ROI Optimisation
