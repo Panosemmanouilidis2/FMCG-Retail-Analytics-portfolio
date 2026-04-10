@@ -22,7 +22,7 @@ The consequences were measurable:
 
 ### What Was Built
 
-- **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B). 5x improvement over linear baseline
+- **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B), 5x improvement over linear baseline
 - **Pre-execution ROI framework** — planners obtain volume forecast and ROI estimate before any promotion runs
 - **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
