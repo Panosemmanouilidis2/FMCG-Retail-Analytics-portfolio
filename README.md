@@ -9,12 +9,12 @@
 
 ### The Business Problem
 
-A global FMCG manufacturer running thousands of trade promotions annually across Western Europe and Southeast Asia had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
+A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
 
 The consequences were measurable:
 
-- Planners in Western Europe were systematically **over-forecasting promotional volumes by 35%** — leading to excess inventory and overstated trade investment cases
-- Planners in Southeast Asia were **under-forecasting by 103%** — leaving significant demand unmet and growth opportunity unrealised
+- Planners in Europe were systematically **over-forecasting promotional volumes by 35%** — leading to excess inventory and overstated trade investment cases
+- Planners in Asia were **under-forecasting by 103%** — leaving significant demand unmet and growth opportunity unrealised
 - **Around 70% of promotions** across both markets missed their volume plan by more than 50% with no mechanism to identify this risk in advance
 - No pre-execution ROI visibility — no way to know which promotions would generate positive incremental gross profit before committing spend
 
@@ -22,7 +22,7 @@ The consequences were measurable:
 
 ### What Was Built
 
-- **XGBoost sell-out forecasting model** — R² 0.81 (Western Europe), R² 0.70 (Southeast Asia). 5x improvement over linear baseline
+- **XGBoost sell-out forecasting model** — R² 0.81 (Europe), R² 0.70 (Asia). 5x improvement over linear baseline
 - **Pre-execution ROI framework** — planners obtain volume forecast and ROI estimate before any promotion runs
 - **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
