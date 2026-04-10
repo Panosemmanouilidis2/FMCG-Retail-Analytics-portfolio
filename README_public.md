@@ -13,8 +13,8 @@ A global FMCG manufacturer running thousands of trade promotions annually across
 
 The consequences were measurable:
 
-- Planners in Europe were systematically **over-forecasting promotional volumes by 35%** leading to excess inventory and overstated trade investment cases
-- Planners in Asia were **under-forecasting by 103%** leaving significant demand unmet and growth opportunity unrealised
+- Planners in Market A (Europe) were systematically **over-forecasting promotional volumes by 35%** leading to excess inventory and overstated trade investment cases
+- Planners in Market B (Asia) were **under-forecasting by 103%** leaving significant demand unmet and growth opportunity unrealised
 - **60–79% of promotions** across both markets missed their volume plan by more than 50% with no mechanism to identify this risk in advance
 - No pre-execution ROI visibility — no way to know which promotions would generate positive incremental gross profit before committing spend
 
@@ -22,7 +22,7 @@ The consequences were measurable:
 
 ### What Was Built
 
-- **XGBoost sell-out forecasting model** — R² 0.81 (Europe), R² 0.70 (Asia). 5x improvement over linear baseline
+- **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B). 5x improvement over linear baseline
 - **Pre-execution ROI framework** — planners obtain volume forecast and ROI estimate before any promotion runs
 - **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
