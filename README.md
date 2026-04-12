@@ -27,7 +27,7 @@ The consequences were measurable:
 - **Live GCP Vertex AI deployment** — real-time forecasts via REST API endpoints
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
 - **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
-- **Data quality resolution** — cleaned and validated 640K+ promotional records across two markets
+- **Data quality resolution** — cleaned and validated 700K+ promotional records across two markets
 
 ---
 
