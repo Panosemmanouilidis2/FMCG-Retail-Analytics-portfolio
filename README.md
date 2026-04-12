@@ -24,10 +24,16 @@ The consequences were measurable:
 
 - **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B), 5x improvement over linear baseline
 - **Pre-execution ROI framework** — volume forecast and ROI estimate before any promotion runs
-- **Live GCP Vertex AI deployment** — real-time forecasts via REST API endpoints
+- **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
 - **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
 - **Data quality resolution** — cleaned and validated 700K+ promotional records across two markets
+
+![Deployment Architecture](promotional-analytics-architecture.svg)
+
+---
+
+### Key Business Outcomes
 
 ---
 
