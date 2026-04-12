@@ -9,12 +9,12 @@
 
 ### The Business Problem
 
-A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable way to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
+A global FMCG manufacturer running thousands of trade promotions annually across two markets had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend.
 
-The consequences were measurable:
+**Quantified consequences:**
 
-- Planners in **Market A (Europe)** were systematically **over-forecasting by 35%** — excess inventory and overstated investment cases
-- Planners in **Market B (Asia)** were **under-forecasting by 103%** — significant demand unmet, growth opportunity unrealised
+- Planners in **Market A** were systematically **over-forecasting by 35%** — excess inventory and overstated investment cases
+- Planners in **Market B** were **under-forecasting by 103%** — significant demand unmet, growth opportunity unrealised
 - **60–79% of promotions** across both markets missed their volume plan by more than 50% with no way to identify this risk in advance
 - No pre-execution ROI visibility — no mechanism to know which promotions would generate positive incremental gross profit before committing spend
 
@@ -27,7 +27,7 @@ The consequences were measurable:
 - **Live GCP Vertex AI deployment** — real-time forecasts via REST API endpoints
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
 - **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
-- **Data quality resolution** — cleaned and validated 700K+ promotional records across two markets
+- **Data quality resolution** — cleaned and validated 640K+ promotional records across two markets
 
 ---
 
@@ -55,14 +55,22 @@ The consequences were measurable:
 
 ### 📓 Run the Notebooks — No Setup Needed
 
-Click any badge to open directly in Google Colab and run in your browser:
-
 | Notebook | Description | Open |
 |---|---|---|
 | 01 — EDA & Forecast Accuracy | Data exploration, planning bias, market comparison | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/01_eda_planning_accuracy.ipynb) |
 | 02 — Feature Engineering & Training | 6 model families, XGBoost tuning, overfitting check | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/02_feature_engineering.ipynb) |
 | 03 — Vertex AI Deployment | GCS, model registry, endpoint deployment *(GCP account required)* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/03_model_training.ipynb) |
 | 04 — Evaluation & SHAP | Metrics, residuals, feature importance, ROI classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/04_model_evaluation_shap.ipynb) |
+
+---
+
+### Portfolio Screenshots
+
+![Streamlit App](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/streamlit_homepage.png)
+
+![Colab Notebook](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/colab_notebook_badge.png)
+
+![Vertex AI Endpoint](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/gcp_vertex_endpoint_active.png)
 
 ---
 
@@ -83,7 +91,7 @@ Click any badge to open directly in Google Colab and run in your browser:
 
 ### Data & Confidentiality Notice
 
-Developed against live commercial sell-out and sell-in data for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data in this repository is synthetically generated to preserve the statistical properties of the original. Planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. Methodology, deployment architecture, and business outcomes are genuine.
+Developed against live commercial sell-out and sell-in data for a global FMCG manufacturer across two markets. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data in this repository is synthetically generated to preserve the statistical properties of the original. Planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. Methodology, deployment architecture, and business outcomes are genuine.
 
 ---
 
