@@ -90,6 +90,7 @@ Click any badge to open directly in Google Colab and run in your browser:
 ### Data & Confidentiality Notice
 
 Developed against live commercial sell-out and sell-in data for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data in this repository is synthetically generated to preserve the statistical properties of the original. Planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. Methodology, deployment architecture, and business outcomes are genuine.
+All portfolio materials have been independently developed and do not contain proprietary data, trade secrets, or confidential business information belonging to any third party.
 
 ---
 
