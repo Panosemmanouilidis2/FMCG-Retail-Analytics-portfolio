@@ -9,25 +9,25 @@
 
 ### The Business Problem
 
-A global FMCG manufacturer running thousands of trade promotions annually across two markets had no reliable, data-driven method to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
+A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable way to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
 
 The consequences were measurable:
 
-- Planners in **Market A** were systematically **over-forecasting promotional volumes by 35%** leading to excess inventory and overstated trade investment cases
-- Planners in **Market B** were **under-forecasting by 103%** leaving significant demand unmet and growth opportunity unrealised
-- **60–79% of promotions** across both markets missed their volume plan by more than 50% with no mechanism to identify this risk in advance
-- No pre-execution ROI visibility — no way to know which promotions would generate positive incremental gross profit before committing spend
+- Planners in **Market A (Europe)** were systematically **over-forecasting by 35%** — excess inventory and overstated investment cases
+- Planners in **Market B (Asia)** were **under-forecasting by 103%** — significant demand unmet, growth opportunity unrealised
+- **60–79% of promotions** across both markets missed their volume plan by more than 50% with no way to identify this risk in advance
+- No pre-execution ROI visibility — no mechanism to know which promotions would generate positive incremental gross profit before committing spend
 
 ---
 
 ### What Was Built
 
 - **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B), 5x improvement over linear baseline
-- **Pre-execution ROI framework** — planners obtain volume forecast and ROI estimate before any promotion runs
-- **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
+- **Pre-execution ROI framework** — volume forecast and ROI estimate before any promotion runs
+- **Live GCP Vertex AI deployment** — real-time forecasts via REST API endpoints
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
-- **Model explainability layer** — identifies whether a promotion is predicted to succeed or fail, and why, in plain language
-- **Data quality resolution** — cleaned and validated 640K+ promotional event records across two structurally different markets
+- **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
+- **Data quality resolution** — cleaned and validated 640K+ promotional records across two markets
 
 ---
 
@@ -35,7 +35,7 @@ The consequences were measurable:
 
 | Metric | Market A | Market B |
 |--------|----------|----------|
-| Model accuracy (R²) | 0.81 | 0.70 |
+| Model accuracy (R²) | **0.81** | **0.70** |
 | Improvement over baseline | 5x | 5x |
 | Planning bias identified | -35% over-forecast | +103% under-forecast |
 | Promos missing plan by >50% | 60% | 79% |
@@ -66,16 +66,6 @@ Click any badge to open directly in Google Colab and run in your browser:
 
 ---
 
-### Portfolio Screenshots
-
-![Streamlit App](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/streamlit_homepage.png)
-
-![Colab Notebook](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/colab_notebook_badge.png)
-
-![Vertex AI Endpoint](https://raw.githubusercontent.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio/main/promotional-analytics/results/gcp_vertex_endpoint_active.png)
-
----
-
 ### Tech Stack
 
 | Layer | Technology |
@@ -93,13 +83,13 @@ Click any badge to open directly in Google Colab and run in your browser:
 
 ### Data & Confidentiality Notice
 
-This project was developed against live commercial sell-out and sell-in data across two markets for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data presented in this repository is synthetically generated to preserve the statistical properties and structural characteristics of the original — planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. The methodology, deployment architecture, and business outcomes are genuine.
+Developed against live commercial sell-out and sell-in data for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data in this repository is synthetically generated to preserve the statistical properties of the original. Planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. Methodology, deployment architecture, and business outcomes are genuine.
 
 ---
 
 ### About
 
-10+ years of FMCG and retail analytics experience spanning both manufacturer and retailer perspectives. Specialising in demand forecasting, promotional analytics, on-shelf availability, and end-to-end ML deployment.
+10+ years of FMCG and retail analytics experience spanning manufacturer and retailer perspectives. Specialising in demand forecasting, promotional analytics, on-shelf availability, and end-to-end ML deployment.
 
 📧 [Get in touch via LinkedIn](https://www.linkedin.com/in/panosemmanouilidis)
 
