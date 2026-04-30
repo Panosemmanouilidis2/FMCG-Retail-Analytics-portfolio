@@ -37,7 +37,7 @@ A planner fills in a simple form: product, retailer, promotion type, budget, dur
 - **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
 - **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
 - **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
-- **Data quality resolution** — cleaned and validated 700K+ promotional records across two markets
+- **Data quality resolution** — cleaned and validated synthetically reproduced promotional data across two markets, preserving the statistical properties of the original 700K+ record dataset
 
 ![Deployment Architecture](promotional-analytics-architecture.svg)
 
