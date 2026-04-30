@@ -52,28 +52,6 @@ A planner fills in a simple form: product, retailer, promotion type, budget, dur
 ![Deployment Architecture](promotional-analytics-architecture.svg)
 
 ```
-Multi-market promotion data (700K+ records)
-               │
-               ▼
-   Data cleaning & feature engineering
-   (15+ derived features · leakage-controlled)
-               │
-          ┌────┴────┐
-          ▼         ▼
-      Market A   Market B
-      XGBoost    XGBoost
-      R²=0.81    R²=0.70
-          └────┬────┘
-               ▼
-     Vertex AI Model Registry
-     (Live endpoints · REST API)
-               │
-               ▼
-     Cloud Run · Streamlit
-     (Planner-facing forecast interface)
-```
-
----
 
 ## 🔗 Try It & Explore the Code
 
