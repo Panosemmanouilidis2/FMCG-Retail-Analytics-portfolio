@@ -63,19 +63,6 @@ A planner fills in a simple form: product, retailer, promotion type, budget, dur
 
 ---
 
-### 📓 Run the Notebooks — No Setup Needed
-
-Click any badge to open directly in Google Colab and run in your browser:
-
-| Notebook | Description | Open |
-|---|---|---|
-| 01 — EDA & Forecast Accuracy | Data exploration, planning bias, market comparison | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/01_eda_planning_accuracy.ipynb) |
-| 02 — Feature Engineering & Training | 6 model families, XGBoost tuning, overfitting check | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/02_feature_engineering.ipynb) |
-| 03 — Vertex AI Deployment | GCS, model registry, endpoint deployment *(GCP account required)* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/03_model_training.ipynb) |
-| 04 — Evaluation & SHAP | Metrics, residuals, feature importance, ROI classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/04_model_evaluation_shap.ipynb) |
-
----
-
 ### Tech Stack
 
 | Layer | Technology |
