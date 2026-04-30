@@ -22,8 +22,6 @@ The consequences were measurable:
 
 ### What This Project Does
 
-Every week, trade planners decide which products to put on promotion, at which retailers, and how much budget to spend. Those decisions were being made on gut feel and spreadsheets — and the numbers showed it. Planners in Europe were over-forecasting volumes by 35%. Planners in Asia were under-forecasting by 103%. Nearly 8 in 10 promotions missed their target by more than half.
-
 We took historical data from thousands of past promotions — what product was promoted, which retailer ran it, what type of deal it was (price cut, multi-buy, in-store display), how long it ran, and what budget was behind it. We then trained a machine learning model to learn the pattern between those inputs and the actual units sold at the till.
 
 The result: give the model a promotion that hasn't happened yet, and it will predict how many units will sell and whether the promotion will make money — before a single penny is spent.
