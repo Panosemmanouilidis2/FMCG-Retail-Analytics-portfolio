@@ -1,81 +1,95 @@
-# FMCG Retail Analytics Portfolio
+# Promotional Sell-Out Forecasting · FMCG & Retail
 
 **Panos Emmanouilidis** · Data Scientist & Analytics Consultant  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/panosemmanouilidis)
 
+**Predicting whether a promotion will deliver the volume it needs — before a penny is spent.**
+
 ---
 
-## Featured Project: Promotional Analytics — Sell-Out Forecasting & Trade ROI Optimisation
+## The Business Problem
 
-### The Business Problem
+Trade promotions — price cuts, multi-buys, in-store displays — are one of the largest cost lines in FMCG. Brands routinely allocate 15–25% of net revenue to promotional activity, yet most planning is still done in spreadsheets, with volume forecasts based on gut feel and historical averages.
 
-A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable way to forecast promotional sell-out volume or evaluate return on investment before committing trade spend. Planning was driven by intuition and historical precedent.
+A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable way to forecast promotional sell-out volume or evaluate return on investment before committing trade spend.
 
 The consequences were measurable:
 
 - Planners in **Market A (Europe)** were systematically **over-forecasting by 35%** — excess inventory and overstated investment cases
 - Planners in **Market B (Asia)** were **under-forecasting by 103%** — significant demand unmet, growth opportunity unrealised
-- **60–79% of promotions** across both markets missed their volume plan by more than 50% with no way to identify this risk in advance
-- No pre-execution ROI visibility — no mechanism to know which promotions would generate positive incremental gross profit before committing spend
+- **60–79% of promotions** across both markets missed their volume plan by more than 50%, with no way to identify this risk in advance
+- **No pre-execution ROI visibility** — no mechanism to know which promotions would generate positive incremental gross profit before committing spend
 
 ---
 
-### What Was Built
+## What This Project Does — In Plain Terms
 
-- **XGBoost sell-out forecasting model** — R² 0.81 (Market A), R² 0.70 (Market B), 5x improvement over linear baseline
-- **Pre-execution ROI framework** — volume forecast and ROI estimate before any promotion runs
-- **Full GCP Vertex AI deployment** — live prediction endpoints serving real-time forecasts via REST API
-- **Streamlit planner application on Cloud Run** — business-facing interface requiring no technical skills
-- **SHAP explainability layer** — identifies why a promotion is predicted to succeed or fail, in plain language
-- **Data quality resolution** — cleaned and validated 700K+ promotional records across two markets
+Every week, trade planners decide which products to put on promotion, at which retailers, and how much budget to spend. Those decisions were being made on gut feel and spreadsheets — and the numbers showed it. Planners in Europe were over-forecasting volumes by 35%. Planners in Asia were under-forecasting by 103%. Nearly 8 in 10 promotions missed their target by more than half.
+
+We took historical data from thousands of past promotions — what product was promoted, which retailer ran it, what type of deal it was (price cut, multi-buy, in-store display), how long it ran, and what budget was behind it. We then trained a machine learning model to learn the pattern between those inputs and the actual units sold at the till.
+
+The result: give the model a promotion that hasn't happened yet, and it will predict how many units will sell and whether the promotion will make money — before a single penny is spent.
+
+A planner fills in a simple form: product, retailer, promotion type, budget, duration. They get back a volume forecast and an ROI estimate in under 10 seconds. No data skills needed. No spreadsheet. No waiting.
+
+---
+
+## Key Business Outcomes
+
+| Metric | Market A (Europe) | Market B (Asia) |
+|---|---|---|
+| Model accuracy (R²) | **0.81** | **0.70** |
+| Improvement over baseline | 5× | 5× |
+| Planning bias identified | −35% over-forecast | +103% under-forecast |
+| Promos missing plan by >50% | 60% | 79% |
+| Best performing mechanic ROI | +0.09 | +10.12 |
+| Worst performing mechanic ROI | −0.11 | −10.00 |
+
+---
+
+## Deployment Architecture
 
 ![Deployment Architecture](promotional-analytics-architecture.svg)
 
+```
+Multi-market promotion data (700K+ records)
+               │
+               ▼
+   Data cleaning & feature engineering
+   (15+ derived features · leakage-controlled)
+               │
+          ┌────┴────┐
+          ▼         ▼
+      Market A   Market B
+      XGBoost    XGBoost
+      R²=0.81    R²=0.70
+          └────┬────┘
+               ▼
+     Vertex AI Model Registry
+     (Live endpoints · REST API)
+               │
+               ▼
+     Cloud Run · Streamlit
+     (Planner-facing forecast interface)
+```
+
 ---
 
-### Key Business Outcomes
-
----
-
-### Key Business Outcomes
-
-| Metric | Market A | Market B |
-|--------|----------|----------|
-| Model accuracy (R²) | **0.81** | **0.70** |
-| Improvement over baseline | 5x | 5x |
-| Planning bias identified | -35% over-forecast | +103% under-forecast |
-| Promos missing plan by >50% | 60% | 79% |
-| Best performing mechanic ROI | +0.09 | +10.12 |
-| Worst performing mechanic ROI | -0.11 | -10.00 |
-
----
-
-### 🔗 Try It & Explore the Code
+## 🔗 Try It & Explore the Code
 
 | | Link |
 |---|---|
 | 🚀 **Live Forecaster App** | [Open Streamlit App](https://unilever-promo-forecaster-128825737789.europe-west2.run.app) |
 | 💻 **Full Technical Repository** | [fmcg-ds-technical-portfolio](https://github.com/Panosemmanouilidis2/fmcg-ds-technical-portfolio) |
 
----
-
-### 📓 Run the Notebooks — No Setup Needed
-
-Click any badge to open directly in Google Colab and run in your browser:
-
-| Notebook | Description | Open |
-|---|---|---|
-| 01 — EDA & Forecast Accuracy | Data exploration, planning bias, market comparison | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/01_eda_planning_accuracy.ipynb) |
-| 02 — Feature Engineering & Training | 6 model families, XGBoost tuning, overfitting check | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/02_feature_engineering.ipynb) |
-| 03 — Vertex AI Deployment | GCS, model registry, endpoint deployment *(GCP account required)* | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/03_model_training.ipynb) |
-| 04 — Evaluation & SHAP | Metrics, residuals, feature importance, ROI classification | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Panosemmanouilidis2/fmcg-ds-technical-portfolio/blob/main/promotional-analytics/notebooks/04_model_evaluation_shap.ipynb) |
+The technical repository contains all training notebooks (runnable in Google Colab with no setup), feature engineering code, deployment scripts, and SHAP explainability analysis.
 
 ---
 
-### Tech Stack
+## Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
+|---|---|
 | Language | Python 3.10 |
 | ML Modelling | XGBoost, LightGBM, Scikit-learn |
 | Explainability | SHAP |
@@ -87,14 +101,17 @@ Click any badge to open directly in Google Colab and run in your browser:
 
 ---
 
-### Data & Confidentiality Notice
+## Data & Confidentiality Notice
 
 Developed against live commercial sell-out and sell-in data for a global FMCG manufacturer. Client identity, retail customer names, and raw datasets are not disclosed in line with professional confidentiality obligations. All data in this repository is synthetically generated to preserve the statistical properties of the original. Planning accuracy biases, ROI distributions, and mechanic performance rankings reflect real analytical findings. Methodology, deployment architecture, and business outcomes are genuine.
+
+The input guidance shown in the app (e.g. "typical range 300–5,000 units") reflects the distribution of the training data — the ranges where the model has the strongest predictive confidence. Inputs outside these ranges are valid but represent extrapolation; treat those predictions as indicative.
+
 All portfolio materials have been independently developed and do not contain proprietary data, trade secrets, or confidential business information belonging to any third party.
 
 ---
 
-### About
+## About
 
 10+ years of FMCG and retail analytics experience spanning manufacturer and retailer perspectives. Specialising in demand forecasting, promotional analytics, on-shelf availability, and end-to-end ML deployment.
 
