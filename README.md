@@ -9,7 +9,7 @@
 
 ## The Business Problem
 
-Trade promotions — price cuts, multi-buys, in-store displays — are one of the largest cost lines in FMCG. Brands routinely allocate 15–25% of net revenue to promotional activity, yet most planning is still done in spreadsheets, with volume forecasts based on gut feel and historical averages.
+Trade promotions including price cuts, multi-buys, in-store displays are one of the largest cost lines in FMCG. Brands routinely allocate 15–25% of net revenue to promotional activity, yet most planning is still done in spreadsheets, with volume forecasts based on gut feel and historical averages.
 
 A global FMCG manufacturer running thousands of trade promotions annually across Europe and Asia had no reliable way to forecast promotional sell-out volume or evaluate return on investment before committing trade spend.
 
